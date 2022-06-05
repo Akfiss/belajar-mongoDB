@@ -17,7 +17,7 @@ db.jenis_barang.find({
             }
         },
         {
-            category: {
+            kategori: {
                 $ne: 'small'
             }
         }
