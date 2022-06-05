@@ -1,9 +1,9 @@
-// select *  from customers where _id = 'khannedy'
+// select *  from customers where _id = 'martha'
 db.customers.find({
     _id: "martha"
 });
 
-// select * from customers where nama = 'Bagus Kahfa'
+// select * from customers where nama = 'Bagas Kahfa'
 db.customers.find({
     name: "Bagas Kahfa"
 });
