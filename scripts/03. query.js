@@ -9,7 +9,7 @@ db.customers.find({
 });
 
 // select * from jenis_barang where tarif = 2000
-db.products.find({
+db.jenis_barang.find({
     tarif: 2000
 });
 
