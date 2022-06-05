@@ -1,17 +1,18 @@
+// Insert dan Update sekaligus
 db.customers.bulkWrite([
     {
         insertOne: {
             document: {
-                _id: "eko",
-                full_name: "Eko"
+                _id: "budi",
+                nama: "Budi"
             }
         }
     },
     {
         insertOne: {
             document: {
-                _id: "kurniawan",
-                full_name: "Kurniawan"
+                _id: "badang",
+                nama: "Badang"
             }
         }
     },
@@ -19,12 +20,12 @@ db.customers.bulkWrite([
         updateMany: {
             filter: {
                 _id: {
-                    $in: ["eko", "kurniawan", "khannedy"]
+                    $in: ["budi", "badang", "bahagia"]
                 }
             },
             update: {
                 $set: {
-                    full_name: "Eko Kurniawan Khannedy"
+                    nama_lengkap: "Budi Badang Bahagia"
                 }
             }
         }
