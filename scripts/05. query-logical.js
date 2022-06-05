@@ -1,40 +1,24 @@
-// select * from products where category in ('laptop', 'handphone') and price > 20000000
-db.products.find({
-    $and: [
-        {
-            category: {
-                $in: ["laptop", "handphone"]
-            }
-        },
-        {
-            price: {
-                $gt: 20000000
-            }
-        }
-    ]
-});
-
-// select * from products where category not in ('laptop', 'handphone')
-db.products.find({
-    category: {
+// select * from jenis_barang where kategori not in ('small', 'medium')
+db.jenis_barang.find({
+    kategori: {
         $not: {
-            $in: ["laptop", "handphone"]
+            $in: ["small", "medium"]
         }
     }
 });
 
-// select * from products where price between 10000000 and 20000000 and category != 'food'
-db.products.find({
+// select * from jenis_barang where tarif between 1000 and 2000 and kategori != 'small'
+db.jenis_barang.find({
     $and: [
         {
-            price: {
-                $gte: 10000000,
-                $lte: 20000000
+            tarif: {
+                $gte: 1000,
+                $lte: 2000
             }
         },
         {
             category: {
-                $ne: 'food'
+                $ne: 'small'
             }
         }
     ]
