@@ -12,10 +12,10 @@ db.products.find({
     }
 });
 
-// select * from jenis_barang where kategori in ('small', 'big') and tarif > 1000
+// select * from jenis_barang where kategori in ('small', 'medium', 'big') and tarif > 1000
 db.products.find({
     kategori: {
-        $in: ["small", "big"]
+        $in: ["small", "medium", "big"]
     },
     tarif: {
         $gt: 1000
