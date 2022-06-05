@@ -2,7 +2,7 @@
 db.createCollection('customers');
 
 // Membuat Collection products
-db.createCollection('products');
+db.createCollection('pegawai');
 
 // Membuat Collection orders
-db.createCollection('orders');
+db.createCollection('pakaian');
