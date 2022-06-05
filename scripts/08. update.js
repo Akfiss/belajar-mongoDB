@@ -1,81 +1,27 @@
-// update products set category = "food" where _id = 1
-db.products.updateOne({
-    _id: 1
+// update customers set alamat = "Jl. Kemenangan no.12" where _id = "kenedy"
+db.customers.updateOne({
+    _id: "kenedy"
 },{
     $set: {
-        category: "food"
+        alamat: "JL. Kemenangan no.12"
     }
 });
 
-// update products set category = "food" where _id = 2
-db.products.updateOne({
-    _id: 2
+// update customers set alamat = "Tidak diketahui" and no_hp = "Tidak diketahui" where _id = "kahfa"
+db.customers.updateMany({
+    _id: "kahfa"
 },{
     $set: {
-        category: "food"
+        alamat: "Tidak diketahui",
+        no_hp: "Tidak diketahui"
     }
 });
 
-// update products set tags = ["food"] where category = "food" and tags is null
-db.products.updateMany({
-    $and: [
-        {
-            category :{
-                $eq: "food"
-            }
-        },
-        {
-            tags: {
-                $exists: false
-            }
-        }
-    ]
-}, {
-    $set: {
-        tags: ["food"]
-    }
-})
-
-// update products set wrong = "wrong"
-db.products.updateMany({}, [
-    {
-        $set: {
-            wrong: "wrong"
-        }
-    }
-]);
-
-// update products set wrong = null
-db.products.updateMany({}, [
-    {
-        $set: {
-            wrong: null
-        }
-    }
-]);
-db.products.updateMany({}, [
-    {
-        $unset: [ "wrong" ] 
-    }
-]);
-
-// insert wrong document
-db.products.insertMany([
-    {
-        _id: 9,
-        name: "Ups Salah",
-        wrong: "Salah Lagi"
-    }
-]);
-
-// replace document with id 9
-db.products.replaceOne({
-    _id: 9
-}, {
-    name: "Adidas Pulseboost HD Running Shoes Sepatu lari Pria",
-    price: new NumberLong(1100000),
-    category: "shoes",
-    tags: [
-        "adidas", "shoes", "running"
-    ]
+// replace customers with id kahfa
+db.customers.replaceOne({
+    _id: "kahfa"
+},{
+    nama: "Bagus Kahfi",
+    alamat: "Jl. Nin aja dulu no.99",
+    no_hp: 082355467890,
 });
