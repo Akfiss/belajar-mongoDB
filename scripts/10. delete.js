@@ -1,7 +1,7 @@
 // Insert anonim document
 db.customers.insertOne({
     _id: "anonim",
-    full_name: "Anonim"
+    nama: "Anonim"
 });
 
 // Delete document by _id
