@@ -13,7 +13,7 @@ db.products.find({
 });
 
 // select * from jenis_barang where kategori in ('small', 'medium', 'big') and tarif > 1000
-db.products.find({
+db.jenis_barang.find({
     kategori: {
         $in: ["small", "medium", "big"]
     },
