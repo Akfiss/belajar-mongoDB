@@ -57,27 +57,32 @@ db.jenis_barang.insertMany([
     {
         _id: 1,
         nama: "Baju Kaos",
-        tarif: new NumberLong(1000)
+        tarif: new NumberLong(1000),
+        kategori: "small"
     },
     {
         _id: 2,
         nama: "Jaket/Kemeja/Sweater",
-        tarif: new NumberLong(2000)
+        tarif: new NumberLong(2000),
+        kategori: "medium"
     },
     {
         _id: 3,
         nama: "Celana Pendek",
-        tarif: new NumberLong(1000)
+        tarif: new NumberLong(1000),
+        kategori: "small"
     },
     {
         _id: 4,
         nama: "Celana Panjang(jeans/kain)",
-        tarif: new NumberLong(2000)
+        tarif: new NumberLong(2000),
+        kategori: "medium"
     },
     {
         _id: 5,
         nama: "Selimut/Gorden",
-        tarif: new NumberLong(3000)
+        tarif: new NumberLong(3000),
+        kategori: "big"
     }
 ]);
 
