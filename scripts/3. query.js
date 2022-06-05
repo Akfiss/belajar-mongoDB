@@ -5,7 +5,7 @@ db.customers.find({
 
 // select * from customers where nama = 'Bagus Kahfa'
 db.customers.find({
-    name: "Bagus Kahfa"
+    name: "Bagas Kahfa"
 });
 
 // select * from jenis_barang where tarif = 2000
