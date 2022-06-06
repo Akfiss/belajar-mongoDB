@@ -17,3 +17,8 @@ db.jenis_barang.find({
 db.orders.find({
     "items.jenis_barang_id": 2
 });
+
+// menampilkan data indeks array ke 1 dengan jenis_barang_id = 3
+db.orders.find({
+    "items.1.jenis_barang_id": 3
+})
