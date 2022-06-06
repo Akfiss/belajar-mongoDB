@@ -22,3 +22,14 @@ db.orders.find({
 db.orders.find({
     "items.1.jenis_barang_id": 3
 })
+
+// menampilkan data _id dan nama dari collection jenis_barang dimana tarif = 2000
+db.jenis_barang.aggregate([
+    {$match: {tarif: {$eq: 2000}}},
+    {$project: {_id: 1, nama: 1}}
+    ])
+
+// menampilkan data _id dan nama dari collection jenis_barang
+db.jenis_barang.aggregate([
+    {$project: {_id: 1, nama: 1}}
+    ])
